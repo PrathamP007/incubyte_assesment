@@ -1,0 +1,11 @@
+Feature: Login Functionality # features/login.feature:1
+
+  @smoke
+  Scenario: Verify valid login                    # features/login.feature:4
+    Given User is on the login page               # steps/loginSteps.py:9
+    When User enters valid credentials            # steps/loginSteps.py:14
+    And User clicks on Login Button               # steps/loginSteps.py:19
+    Then User should see the profile builder page # steps/loginSteps.py:25
+      Assertion Failed: User not redirected to profile builder page!
+
+
